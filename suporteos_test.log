@@ -1,0 +1,720 @@
+2024-05-13T14:34:22.165-03:00  INFO 12384 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Starting ScholarstockApplication using Java 17.0.10 with PID 12384 (D:\Projetos\ScholarStock\scholarstock\target\classes started by jeffe in d:\Projetos\ScholarStock)
+2024-05-13T14:34:22.176-03:00  INFO 12384 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : The following 1 profile is active: "test"
+2024-05-13T14:34:22.277-03:00  INFO 12384 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-13T14:34:22.277-03:00  INFO 12384 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-13T14:34:23.038-03:00  INFO 12384 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-13T14:34:23.066-03:00  INFO 12384 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-05-13T14:34:24.336-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-13T14:34:24.358-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13T14:34:24.359-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-13T14:34:24.442-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13T14:34:24.442-03:00  INFO 12384 --- [scholarstock] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2165 ms
+2024-05-13T14:34:24.476-03:00  INFO 12384 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-13T14:34:24.705-03:00  INFO 12384 --- [scholarstock] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:scholardb user=SA
+2024-05-13T14:34:24.705-03:00  INFO 12384 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-13T14:34:24.721-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:scholardb'
+2024-05-13T14:34:24.858-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-13T14:34:24.982-03:00  INFO 12384 --- [scholarstock] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-13T14:34:25.050-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-13T14:34:25.173-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7eb34110
+2024-05-13T14:34:25.173-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@7eb34110
+2024-05-13T14:34:25.173-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@7eb34110
+2024-05-13T14:34:25.173-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@4661f21b
+2024-05-13T14:34:25.174-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@4661f21b
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@105da3f
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@105da3f
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@36111ea1
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@36111ea1
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@524e62b2
+2024-05-13T14:34:25.175-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@524e62b2
+2024-05-13T14:34:25.176-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@524e62b2
+2024-05-13T14:34:25.177-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@1b76a3ca
+2024-05-13T14:34:25.177-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@1b76a3ca
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@1b76a3ca
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@2b2d1a85
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@2b2d1a85
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@5eb84d9
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@5b8d3243
+2024-05-13T14:34:25.178-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@5b8d3243
+2024-05-13T14:34:25.179-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@6c79b0f7
+2024-05-13T14:34:25.179-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@2fc366cf
+2024-05-13T14:34:25.179-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@76d7f2a2
+2024-05-13T14:34:25.179-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@76d7f2a2
+2024-05-13T14:34:25.180-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@76d7f2a2
+2024-05-13T14:34:25.180-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@447ac911
+2024-05-13T14:34:25.180-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@447ac911
+2024-05-13T14:34:25.180-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@447ac911
+2024-05-13T14:34:25.180-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@65a52761
+2024-05-13T14:34:25.181-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@65a52761
+2024-05-13T14:34:25.181-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@65a52761
+2024-05-13T14:34:25.181-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@51e4d004
+2024-05-13T14:34:25.181-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@51e4d004
+2024-05-13T14:34:25.181-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@51e4d004
+2024-05-13T14:34:25.182-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@186f7a78
+2024-05-13T14:34:25.182-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@186f7a78
+2024-05-13T14:34:25.182-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@186f7a78
+2024-05-13T14:34:25.182-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@a4f1a25
+2024-05-13T14:34:25.183-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@a4f1a25
+2024-05-13T14:34:25.183-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@461dba22
+2024-05-13T14:34:25.183-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@461dba22
+2024-05-13T14:34:25.183-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@310e2615
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@310e2615
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@310e2615
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@525126f6
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@203d90ab
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@203d90ab
+2024-05-13T14:34:25.184-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@b5af224
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@4b2453d4
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@4b2453d4
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@4b2453d4
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@1019bad0
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@5c6dd8b0
+2024-05-13T14:34:25.186-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@facacb
+2024-05-13T14:34:25.187-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@69a983f3
+2024-05-13T14:34:25.187-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@69a983f3
+2024-05-13T14:34:25.187-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@343b6b2c
+2024-05-13T14:34:25.187-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@343b6b2c
+2024-05-13T14:34:25.187-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@6a18d43
+2024-05-13T14:34:25.188-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@50dba3ce
+2024-05-13T14:34:25.188-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@75c8043d
+2024-05-13T14:34:25.188-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@1ac573a3
+2024-05-13T14:34:25.188-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@10843e2d
+2024-05-13T14:34:25.188-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@1dcc2a20
+2024-05-13T14:34:25.189-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@28903c48
+2024-05-13T14:34:25.189-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@28903c48
+2024-05-13T14:34:25.189-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@19790a92
+2024-05-13T14:34:25.189-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@19790a92
+2024-05-13T14:34:25.189-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@283d3ac6
+2024-05-13T14:34:25.190-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@283d3ac6
+2024-05-13T14:34:25.190-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@545c98cb
+2024-05-13T14:34:25.190-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@545c98cb
+2024-05-13T14:34:25.190-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@7d879c74
+2024-05-13T14:34:25.190-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@7d879c74
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@2cfb34cc
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@6d51c09f
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@5d7b873e
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@5d7b873e
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@1cded4d9
+2024-05-13T14:34:25.191-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@69f6ceda
+2024-05-13T14:34:25.192-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@ac0be43
+2024-05-13T14:34:25.192-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@b039a52
+2024-05-13T14:34:25.192-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@b039a52
+2024-05-13T14:34:25.192-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@6111fff7
+2024-05-13T14:34:25.192-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@3ece6d11
+2024-05-13T14:34:25.193-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@3173fe2d
+2024-05-13T14:34:25.193-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@3173fe2d
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@26b5335b
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@26b5335b
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@48b58e3d
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@48b58e3d
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@48b58e3d
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@55ec4df
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@55ec4df
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@55ec4df
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@2bf2d0cf
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@24d21101
+2024-05-13T14:34:25.194-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@40f2b7c0
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@40f2b7c0
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@3379eb3d
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@3379eb3d
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@3379eb3d
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@eb03135
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@3a5e63fb
+2024-05-13T14:34:25.195-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@6f479fc7
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@6f479fc7
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@139bb111
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@139bb111
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@139bb111
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@1cad03ce
+2024-05-13T14:34:25.196-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@1cad03ce
+2024-05-13T14:34:25.197-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@5525ea1b
+2024-05-13T14:34:25.197-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@5525ea1b
+2024-05-13T14:34:25.197-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@6cffedf
+2024-05-13T14:34:25.197-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@6cffedf
+2024-05-13T14:34:25.197-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@4892d42e
+2024-05-13T14:34:25.198-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@4892d42e
+2024-05-13T14:34:25.198-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@3cd51d81
+2024-05-13T14:34:25.198-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@3cd51d81
+2024-05-13T14:34:25.198-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@46da4d32
+2024-05-13T14:34:25.198-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@3f9a6a30
+2024-05-13T14:34:25.203-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@2b0d067c
+2024-05-13T14:34:25.204-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@2b0d067c
+2024-05-13T14:34:25.204-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@1aaaf3c7
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@ec3c08c
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@637b6fc5
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@328df417
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@7ff40d4a
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@6f236598
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@579e2afe
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@aee5156
+2024-05-13T14:34:25.205-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@55af831c
+2024-05-13T14:34:25.427-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:34:25.508-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2024-05-13T14:34:25.526-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:34:25.527-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:34:25.527-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:34:25.534-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@42143f29] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@65ff0554]
+2024-05-13T14:34:25.831-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-13T14:34:25.831-03:00 DEBUG 12384 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@42143f29] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@fbc909a]
+2024-05-13T14:34:25.831-03:00 TRACE 12384 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@fbc909a] for TypeConfiguration
+2024-05-13T14:34:25.831-03:00  INFO 12384 --- [scholarstock] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T14:34:25.963-03:00  WARN 12384 --- [scholarstock] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-13T14:34:26.375-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-13T14:34:26.407-03:00  INFO 12384 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-13T14:34:26.423-03:00  INFO 12384 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Started ScholarstockApplication in 4.849 seconds (process running for 5.349)
+2024-05-13T14:40:21.915-03:00  INFO 8368 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Starting ScholarstockApplication using Java 17.0.10 with PID 8368 (D:\Projetos\ScholarStock\scholarstock\target\classes started by jeffe in d:\Projetos\ScholarStock)
+2024-05-13T14:40:21.930-03:00  INFO 8368 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : The following 1 profile is active: "test"
+2024-05-13T14:40:22.049-03:00  INFO 8368 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-13T14:40:22.049-03:00  INFO 8368 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-13T14:40:22.771-03:00  INFO 8368 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-13T14:40:22.787-03:00  INFO 8368 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2024-05-13T14:40:23.930-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-13T14:40:23.946-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13T14:40:23.946-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-13T14:40:24.047-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13T14:40:24.047-03:00  INFO 8368 --- [scholarstock] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1998 ms
+2024-05-13T14:40:24.079-03:00  INFO 8368 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-13T14:40:24.303-03:00  INFO 8368 --- [scholarstock] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:scholardb user=SA
+2024-05-13T14:40:24.305-03:00  INFO 8368 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-13T14:40:24.318-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:scholardb'
+2024-05-13T14:40:24.463-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-13T14:40:24.646-03:00  INFO 8368 --- [scholarstock] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-13T14:40:24.718-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@334ec106
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@334ec106
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@334ec106
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@9ab9516
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@9ab9516
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@5996f0b8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@5996f0b8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@1e576abc
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@1e576abc
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5b54ce81
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@5b54ce81
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@5b54ce81
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@e82f3d8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@e82f3d8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@e82f3d8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@3885bb55
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@3885bb55
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@218093ae
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@3f6d35cf
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@3f6d35cf
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@389f4a96
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@2dd501c3
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@8edfa34
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@8edfa34
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@8edfa34
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@5ef875ab
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@5ef875ab
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@5ef875ab
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@1cf15f18
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@1cf15f18
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@1cf15f18
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@19af9e5c
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@19af9e5c
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@19af9e5c
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7ef4eb07
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@7ef4eb07
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@7ef4eb07
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@63bc8c5f
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@63bc8c5f
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@752306af
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@752306af
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@109b2b29
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@109b2b29
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@109b2b29
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@496e46ee
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@4eb7f5e8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@4eb7f5e8
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@23cc84ef
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@6a4731dc
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@6a4731dc
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@6a4731dc
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@51a5434c
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@20cce425
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@67e0f72f
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@34faf3de
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@34faf3de
+2024-05-13T14:40:24.863-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@4f3e692e
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@4f3e692e
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@8944120
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@682d9692
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@baaec4a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@37618308
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@1d564985
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@194bd5bb
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@45dfb264
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@45dfb264
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@7e1d1014
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@7e1d1014
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@51a86433
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@51a86433
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@168995b0
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@168995b0
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@2efd4997
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@2efd4997
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@38f661ec
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@2aed033d
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@709337c5
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@709337c5
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@34e679b1
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@3f1497c0
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@7da29ff4
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@1466b29a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@1466b29a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@13ca6a56
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@87b4578
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@61cf36bc
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@61cf36bc
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@401caa7d
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@401caa7d
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@44e0f2
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@44e0f2
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@44e0f2
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@52462507
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@52462507
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@52462507
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@4a249325
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@6fce875e
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@482ab925
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@482ab925
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@2ba7d33a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@2ba7d33a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@2ba7d33a
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@45f4d0d0
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@5e1b4b47
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@43652230
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@43652230
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@564e1765
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@564e1765
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@564e1765
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@355f3f2c
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@355f3f2c
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@311a0bb3
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@311a0bb3
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5b04db02
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5b04db02
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@7dd71a38
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@7dd71a38
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@31bdecf1
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@31bdecf1
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@501b2ee6
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@2dba332c
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@38a6fb64
+2024-05-13T14:40:24.879-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@38a6fb64
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@7751fae3
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@17a8a00a
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@1e4a25a0
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@ee33f60
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@769d4abd
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@24e71c94
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@6b4f4a8d
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@7cc060bb
+2024-05-13T14:40:24.894-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@6094153c
+2024-05-13T14:40:25.112-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-13T14:40:25.244-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2024-05-13T14:40:25.244-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2024-05-13T14:40:25.245-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2024-05-13T14:40:25.248-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:40:25.249-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:40:25.252-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2024-05-13T14:40:25.257-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:40:25.258-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:40:25.258-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:40:25.262-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@56088be0] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@217ed595]
+2024-05-13T14:40:25.574-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-13T14:40:25.574-03:00 DEBUG 8368 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@56088be0] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@5f263539]
+2024-05-13T14:40:25.591-03:00 TRACE 8368 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@5f263539] for TypeConfiguration
+2024-05-13T14:40:25.591-03:00  INFO 8368 --- [scholarstock] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T14:40:25.730-03:00  WARN 8368 --- [scholarstock] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-13T14:40:26.127-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-13T14:40:26.174-03:00  INFO 8368 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-13T14:40:26.190-03:00  INFO 8368 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Started ScholarstockApplication in 4.91 seconds (process running for 5.441)
+2024-05-13T14:42:04.409-03:00  INFO 26904 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Starting ScholarstockApplication using Java 17.0.10 with PID 26904 (D:\Projetos\ScholarStock\scholarstock\target\classes started by jeffe in d:\Projetos\ScholarStock)
+2024-05-13T14:42:04.415-03:00  INFO 26904 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : The following 1 profile is active: "test"
+2024-05-13T14:42:04.520-03:00  INFO 26904 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-13T14:42:04.520-03:00  INFO 26904 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-13T14:42:05.213-03:00  INFO 26904 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-13T14:42:05.298-03:00  INFO 26904 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2024-05-13T14:42:06.455-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-13T14:42:06.471-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13T14:42:06.471-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-13T14:42:06.530-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13T14:42:06.530-03:00  INFO 26904 --- [scholarstock] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2003 ms
+2024-05-13T14:42:06.580-03:00  INFO 26904 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-13T14:42:06.803-03:00  INFO 26904 --- [scholarstock] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:scholardb user=SA
+2024-05-13T14:42:06.807-03:00  INFO 26904 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-13T14:42:06.819-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:scholardb'
+2024-05-13T14:42:06.979-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-13T14:42:07.046-03:00  INFO 26904 --- [scholarstock] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-13T14:42:07.096-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@6dd9a26e
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@6dd9a26e
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@6dd9a26e
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@190154c6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@190154c6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@1b5a7372
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@1b5a7372
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@71bbb4bc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@71bbb4bc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@51d1b237
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@51d1b237
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@51d1b237
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@42e57baf
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@42e57baf
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@42e57baf
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@7a424431
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@7a424431
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@139360d5
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@7b1cd494
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@7b1cd494
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@2d42e192
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@45c95bc7
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@4dd40e63
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@4dd40e63
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@4dd40e63
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@50f1db39
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@50f1db39
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@50f1db39
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6a05eec4
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@6a05eec4
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@6a05eec4
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@651d8720
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@651d8720
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@651d8720
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@8d72af6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@8d72af6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@8d72af6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@562100c6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@562100c6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@1397b708
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@1397b708
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@1aba06dd
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@1aba06dd
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@1aba06dd
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@2b0b0fe6
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@75720d71
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@75720d71
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@5b73cb20
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@11b5b27d
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@11b5b27d
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@11b5b27d
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@6232eb92
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@74e7b20
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@42219a22
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@7e3bee41
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@7e3bee41
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@ba0f46f
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@ba0f46f
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@7f430940
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@31fd6c00
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@1015d598
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@1c9a5879
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@7b744ba3
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@21b3b5a1
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@1fb41d1a
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@1fb41d1a
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@51a3c705
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@51a3c705
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@853a7c1
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@853a7c1
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@34f105d7
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@34f105d7
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@b92829e
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@b92829e
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@44c6e706
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@513e2df0
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@6ddd55bd
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@6ddd55bd
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@7244bcea
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1c98b73
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@21b86717
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@26cfbe20
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@26cfbe20
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@71bbe5ff
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@3ce46aa8
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@5e0622fc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@5e0622fc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@5e3b9a2
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@5e3b9a2
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@2bd930fc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@2bd930fc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@2bd930fc
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@34f7be05
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@34f7be05
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@34f7be05
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@5b096ba5
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@433ff7cf
+2024-05-13T14:42:07.212-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@21036184
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@21036184
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@288de437
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@288de437
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@288de437
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@3849f6c0
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@4f4ef89
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@3e41b1d2
+2024-05-13T14:42:07.228-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@3e41b1d2
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@ea24072
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@ea24072
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@2d097e88
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@2d097e88
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@1ef585da
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@1ef585da
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@3547c1bb
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@3547c1bb
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@297aa6b1
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@297aa6b1
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@4f616028
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@7d88f74b
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@767441fd
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@767441fd
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@7c0d8587
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@d4de35a
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@2c004baa
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@301d1bf3
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@202c81ca
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@4299e1a6
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@6ceabf44
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@34f0e3a9
+2024-05-13T14:42:07.229-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@7096162c
+2024-05-13T14:42:07.454-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-13T14:42:07.552-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2024-05-13T14:42:07.552-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2024-05-13T14:42:07.552-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:42:07.563-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5a9b4343] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@39ddef2e]
+2024-05-13T14:42:08.487-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-13T14:42:08.487-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@5a9b4343] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@1408d3bd]
+2024-05-13T14:42:08.503-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists grupoproduto cascade 
+2024-05-13T14:42:08.503-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists grupoproduto_seq
+2024-05-13T14:42:08.503-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    create sequence grupoproduto_seq start with 1 increment by 50
+2024-05-13T14:42:08.514-03:00 DEBUG 26904 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    create table grupoproduto (
+        id integer not null,
+        descricao varchar(50) not null,
+        primary key (id)
+    )
+2024-05-13T14:42:08.519-03:00 TRACE 26904 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@1408d3bd] for TypeConfiguration
+2024-05-13T14:42:08.519-03:00  INFO 26904 --- [scholarstock] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T14:42:08.911-03:00  WARN 26904 --- [scholarstock] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-13T14:42:09.297-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-13T14:42:09.328-03:00  INFO 26904 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-13T14:42:09.344-03:00  INFO 26904 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Started ScholarstockApplication in 5.529 seconds (process running for 6.016)
+2024-05-13T14:54:45.754-03:00  INFO 33592 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Starting ScholarstockApplication using Java 17.0.10 with PID 33592 (D:\Projetos\ScholarStock\scholarstock\target\classes started by jeffe in d:\Projetos\ScholarStock)
+2024-05-13T14:54:45.757-03:00  INFO 33592 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : The following 1 profile is active: "test"
+2024-05-13T14:54:45.857-03:00  INFO 33592 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-05-13T14:54:45.857-03:00  INFO 33592 --- [scholarstock] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-05-13T14:54:46.569-03:00  INFO 33592 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-13T14:54:46.656-03:00  INFO 33592 --- [scholarstock] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2024-05-13T14:54:47.797-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-05-13T14:54:47.817-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-05-13T14:54:47.817-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-05-13T14:54:47.891-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-05-13T14:54:47.892-03:00  INFO 33592 --- [scholarstock] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2033 ms
+2024-05-13T14:54:47.934-03:00  INFO 33592 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-05-13T14:54:48.147-03:00  INFO 33592 --- [scholarstock] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:scholardb user=SA
+2024-05-13T14:54:48.150-03:00  INFO 33592 --- [scholarstock] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-05-13T14:54:48.161-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:scholardb'
+2024-05-13T14:54:48.321-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-13T14:54:48.422-03:00  INFO 33592 --- [scholarstock] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-13T14:54:48.508-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-05-13T14:54:48.614-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1c98b73
+2024-05-13T14:54:48.615-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration boolean -> org.hibernate.type.BasicTypeReference@1c98b73
+2024-05-13T14:54:48.615-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Boolean -> org.hibernate.type.BasicTypeReference@1c98b73
+2024-05-13T14:54:48.615-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration numeric_boolean -> org.hibernate.type.BasicTypeReference@21b86717
+2024-05-13T14:54:48.615-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.NumericBooleanConverter -> org.hibernate.type.BasicTypeReference@21b86717
+2024-05-13T14:54:48.615-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration true_false -> org.hibernate.type.BasicTypeReference@26cfbe20
+2024-05-13T14:54:48.616-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.TrueFalseConverter -> org.hibernate.type.BasicTypeReference@26cfbe20
+2024-05-13T14:54:48.616-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration yes_no -> org.hibernate.type.BasicTypeReference@71bbe5ff
+2024-05-13T14:54:48.616-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.YesNoConverter -> org.hibernate.type.BasicTypeReference@71bbe5ff
+2024-05-13T14:54:48.616-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@3ce46aa8
+2024-05-13T14:54:48.617-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte -> org.hibernate.type.BasicTypeReference@3ce46aa8
+2024-05-13T14:54:48.617-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Byte -> org.hibernate.type.BasicTypeReference@3ce46aa8
+2024-05-13T14:54:48.618-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary -> org.hibernate.type.BasicTypeReference@5e0622fc
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration byte[] -> org.hibernate.type.BasicTypeReference@5e0622fc
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [B -> org.hibernate.type.BasicTypeReference@5e0622fc
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration binary_wrapper -> org.hibernate.type.BasicTypeReference@34f7be05
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-binary -> org.hibernate.type.BasicTypeReference@34f7be05
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration image -> org.hibernate.type.BasicTypeReference@5b096ba5
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration blob -> org.hibernate.type.BasicTypeReference@433ff7cf
+2024-05-13T14:54:48.619-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Blob -> org.hibernate.type.BasicTypeReference@433ff7cf
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob -> org.hibernate.type.BasicTypeReference@21036184
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_blob_wrapper -> org.hibernate.type.BasicTypeReference@288de437
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3849f6c0
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration short -> org.hibernate.type.BasicTypeReference@3849f6c0
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Short -> org.hibernate.type.BasicTypeReference@3849f6c0
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration integer -> org.hibernate.type.BasicTypeReference@4f4ef89
+2024-05-13T14:54:48.620-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration int -> org.hibernate.type.BasicTypeReference@4f4ef89
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Integer -> org.hibernate.type.BasicTypeReference@4f4ef89
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@3e41b1d2
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration long -> org.hibernate.type.BasicTypeReference@3e41b1d2
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Long -> org.hibernate.type.BasicTypeReference@3e41b1d2
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:54:48.621-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration float -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Float -> org.hibernate.type.BasicTypeReference@79aa4671
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@ea24072
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration double -> org.hibernate.type.BasicTypeReference@ea24072
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Double -> org.hibernate.type.BasicTypeReference@ea24072
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_integer -> org.hibernate.type.BasicTypeReference@2d097e88
+2024-05-13T14:54:48.622-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigInteger -> org.hibernate.type.BasicTypeReference@2d097e88
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration big_decimal -> org.hibernate.type.BasicTypeReference@1ef585da
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.math.BigDecimal -> org.hibernate.type.BasicTypeReference@1ef585da
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character -> org.hibernate.type.BasicTypeReference@3547c1bb
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char -> org.hibernate.type.BasicTypeReference@3547c1bb
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Character -> org.hibernate.type.BasicTypeReference@3547c1bb
+2024-05-13T14:54:48.623-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration character_nchar -> org.hibernate.type.BasicTypeReference@297aa6b1
+2024-05-13T14:54:48.624-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration string -> org.hibernate.type.BasicTypeReference@4f616028
+2024-05-13T14:54:48.624-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.String -> org.hibernate.type.BasicTypeReference@4f616028
+2024-05-13T14:54:48.624-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nstring -> org.hibernate.type.BasicTypeReference@7d88f74b
+2024-05-13T14:54:48.624-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration characters -> org.hibernate.type.BasicTypeReference@7649bb58
+2024-05-13T14:54:48.624-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration char[] -> org.hibernate.type.BasicTypeReference@7649bb58
+2024-05-13T14:54:48.625-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration [C -> org.hibernate.type.BasicTypeReference@7649bb58
+2024-05-13T14:54:48.625-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration wrapper-characters -> org.hibernate.type.BasicTypeReference@afad40e
+2024-05-13T14:54:48.625-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration text -> org.hibernate.type.BasicTypeReference@4e5e8559
+2024-05-13T14:54:48.625-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ntext -> org.hibernate.type.BasicTypeReference@74d61176
+2024-05-13T14:54:48.625-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration clob -> org.hibernate.type.BasicTypeReference@4f7ee7cf
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Clob -> org.hibernate.type.BasicTypeReference@4f7ee7cf
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration nclob -> org.hibernate.type.BasicTypeReference@1378008a
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.NClob -> org.hibernate.type.BasicTypeReference@1378008a
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob -> org.hibernate.type.BasicTypeReference@29b62bf1
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_char_array -> org.hibernate.type.BasicTypeReference@6dafd210
+2024-05-13T14:54:48.626-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_clob_character_array -> org.hibernate.type.BasicTypeReference@55d700f5
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob -> org.hibernate.type.BasicTypeReference@6f82695
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_character_array -> org.hibernate.type.BasicTypeReference@1e896c18
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration materialized_nclob_char_array -> org.hibernate.type.BasicTypeReference@da5128b
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> org.hibernate.type.BasicTypeReference@60987b62
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> org.hibernate.type.BasicTypeReference@60987b62
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDateTime -> org.hibernate.type.BasicTypeReference@2793356a
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDateTime -> org.hibernate.type.BasicTypeReference@2793356a
+2024-05-13T14:54:48.627-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalDate -> org.hibernate.type.BasicTypeReference@72af642c
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalDate -> org.hibernate.type.BasicTypeReference@72af642c
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration LocalTime -> org.hibernate.type.BasicTypeReference@573b11b8
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.LocalTime -> org.hibernate.type.BasicTypeReference@573b11b8
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTime -> org.hibernate.type.BasicTypeReference@74db2356
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetDateTime -> org.hibernate.type.BasicTypeReference@74db2356
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4add70c2
+2024-05-13T14:54:48.628-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@435af3b1
+2024-05-13T14:54:48.629-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTime -> org.hibernate.type.BasicTypeReference@4ce39cb3
+2024-05-13T14:54:48.629-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.OffsetTime -> org.hibernate.type.BasicTypeReference@4ce39cb3
+2024-05-13T14:54:48.629-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeUtc -> org.hibernate.type.BasicTypeReference@618fc7ea
+2024-05-13T14:54:48.629-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithTimezone -> org.hibernate.type.BasicTypeReference@4075e079
+2024-05-13T14:54:48.629-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration OffsetTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@542654bd
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTime -> org.hibernate.type.BasicTypeReference@4704c8e
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZonedDateTime -> org.hibernate.type.BasicTypeReference@4704c8e
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithTimezone -> org.hibernate.type.BasicTypeReference@1b5f7b7d
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZonedDateTimeWithoutTimezone -> org.hibernate.type.BasicTypeReference@74c62647
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration date -> org.hibernate.type.BasicTypeReference@12a307de
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Date -> org.hibernate.type.BasicTypeReference@12a307de
+2024-05-13T14:54:48.630-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration time -> org.hibernate.type.BasicTypeReference@14b12d38
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Time -> org.hibernate.type.BasicTypeReference@14b12d38
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timestamp -> org.hibernate.type.BasicTypeReference@74d53840
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.sql.Timestamp -> org.hibernate.type.BasicTypeReference@74d53840
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Date -> org.hibernate.type.BasicTypeReference@74d53840
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar -> org.hibernate.type.BasicTypeReference@31e4cc83
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Calendar -> org.hibernate.type.BasicTypeReference@31e4cc83
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.GregorianCalendar -> org.hibernate.type.BasicTypeReference@31e4cc83
+2024-05-13T14:54:48.631-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_date -> org.hibernate.type.BasicTypeReference@3b73a096
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration calendar_time -> org.hibernate.type.BasicTypeReference@2636922d
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration instant -> org.hibernate.type.BasicTypeReference@7b7ca993
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Instant -> org.hibernate.type.BasicTypeReference@7b7ca993
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid -> org.hibernate.type.BasicTypeReference@6cebe2ab
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.UUID -> org.hibernate.type.BasicTypeReference@6cebe2ab
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration pg-uuid -> org.hibernate.type.BasicTypeReference@6cebe2ab
+2024-05-13T14:54:48.632-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-binary -> org.hibernate.type.BasicTypeReference@4a3a98b0
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration uuid-char -> org.hibernate.type.BasicTypeReference@588fcc20
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration class -> org.hibernate.type.BasicTypeReference@46a1c693
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Class -> org.hibernate.type.BasicTypeReference@46a1c693
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration currency -> org.hibernate.type.BasicTypeReference@75ec8a56
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Currency -> org.hibernate.type.BasicTypeReference@75ec8a56
+2024-05-13T14:54:48.633-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Currency -> org.hibernate.type.BasicTypeReference@75ec8a56
+2024-05-13T14:54:48.634-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration locale -> org.hibernate.type.BasicTypeReference@6b8d7343
+2024-05-13T14:54:48.634-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.Locale -> org.hibernate.type.BasicTypeReference@6b8d7343
+2024-05-13T14:54:48.635-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration serializable -> org.hibernate.type.BasicTypeReference@4d455cde
+2024-05-13T14:54:48.635-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.io.Serializable -> org.hibernate.type.BasicTypeReference@4d455cde
+2024-05-13T14:54:48.635-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration timezone -> org.hibernate.type.BasicTypeReference@5989ebb
+2024-05-13T14:54:48.635-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.util.TimeZone -> org.hibernate.type.BasicTypeReference@5989ebb
+2024-05-13T14:54:48.635-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration ZoneOffset -> org.hibernate.type.BasicTypeReference@14b71a64
+2024-05-13T14:54:48.636-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.ZoneOffset -> org.hibernate.type.BasicTypeReference@14b71a64
+2024-05-13T14:54:48.636-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration url -> org.hibernate.type.BasicTypeReference@14a074da
+2024-05-13T14:54:48.636-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.net.URL -> org.hibernate.type.BasicTypeReference@14a074da
+2024-05-13T14:54:48.636-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration vector -> org.hibernate.type.BasicTypeReference@7364693c
+2024-05-13T14:54:48.636-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration row_version -> org.hibernate.type.BasicTypeReference@32c85cad
+2024-05-13T14:54:48.646-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration object -> org.hibernate.type.JavaObjectType@32391efd
+2024-05-13T14:54:48.647-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.lang.Object -> org.hibernate.type.JavaObjectType@32391efd
+2024-05-13T14:54:48.648-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration null -> org.hibernate.type.NullType@5ae90198
+2024-05-13T14:54:48.649-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_date -> org.hibernate.type.BasicTypeReference@79fc8801
+2024-05-13T14:54:48.649-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_time -> org.hibernate.type.BasicTypeReference@65a806bb
+2024-05-13T14:54:48.649-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_timestamp -> org.hibernate.type.BasicTypeReference@2089a910
+2024-05-13T14:54:48.649-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar -> org.hibernate.type.BasicTypeReference@32fe8958
+2024-05-13T14:54:48.650-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_date -> org.hibernate.type.BasicTypeReference@2f5fa386
+2024-05-13T14:54:48.650-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_calendar_time -> org.hibernate.type.BasicTypeReference@a67f508
+2024-05-13T14:54:48.650-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_binary -> org.hibernate.type.BasicTypeReference@67cb1c7d
+2024-05-13T14:54:48.650-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration imm_serializable -> org.hibernate.type.BasicTypeReference@2139ed95
+2024-05-13T14:54:48.864-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-13T14:54:48.962-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NCharTypeDescriptor) replaced previous registration(CharTypeDescriptor)
+2024-05-13T14:54:48.962-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NVarcharTypeDescriptor) replaced previous registration(VarcharTypeDescriptor)
+2024-05-13T14:54:48.963-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(LongNVarcharTypeDescriptor) replaced previous registration(LongVarcharTypeDescriptor)
+2024-05-13T14:54:48.965-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(NClobTypeDescriptor(DEFAULT)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:54:48.966-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(2005, ClobTypeDescriptor(STREAM_BINDING)) replaced previous registration(ClobTypeDescriptor(DEFAULT))
+2024-05-13T14:54:48.968-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.t.d.jdbc.spi.JdbcTypeRegistry        : addDescriptor(TimestampUtcDescriptor) replaced previous registration(TimestampUtcDescriptor)
+2024-05-13T14:54:48.976-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration org.hibernate.type.DurationType -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:54:48.977-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:54:48.977-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.type.BasicTypeRegistry     : Adding type registration java.time.Duration -> basicType@1(java.time.Duration,3015)
+2024-05-13T14:54:48.981-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4d7cfffb] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@506024e8]
+2024-05-13T14:54:50.034-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-13T14:54:50.035-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@4d7cfffb] to SessionFactoryImplementor [org.hibernate.internal.SessionFactoryImpl@4bf0f405]
+2024-05-13T14:54:50.047-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    drop table if exists grupoproduto cascade 
+2024-05-13T14:54:50.050-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    drop sequence if exists grupoproduto_seq
+2024-05-13T14:54:50.056-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    create sequence grupoproduto_seq start with 1 increment by 50
+2024-05-13T14:54:50.061-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    create table grupoproduto (
+        id integer not null,
+        descricao varchar(50) not null,
+        primary key (id)
+    )
+2024-05-13T14:54:50.066-03:00 TRACE 33592 --- [scholarstock] [restartedMain] o.h.type.spi.TypeConfiguration$Scope     : Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@4bf0f405] for TypeConfiguration
+2024-05-13T14:54:50.067-03:00  INFO 33592 --- [scholarstock] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-13T14:54:50.478-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for grupoproduto_seq
+2024-05-13T14:54:50.532-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        grupoproduto
+        (descricao, id) 
+    values
+        (?, ?)
+2024-05-13T14:54:50.541-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    select
+        next value for grupoproduto_seq
+2024-05-13T14:54:50.542-03:00 DEBUG 33592 --- [scholarstock] [restartedMain] org.hibernate.SQL                        : 
+    insert 
+    into
+        grupoproduto
+        (descricao, id) 
+    values
+        (?, ?)
+2024-05-13T14:54:50.612-03:00  WARN 33592 --- [scholarstock] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-05-13T14:54:50.979-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-05-13T14:54:51.015-03:00  INFO 33592 --- [scholarstock] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-05-13T14:54:51.025-03:00  INFO 33592 --- [scholarstock] [restartedMain] c.s.s.ScholarstockApplication            : Started ScholarstockApplication in 5.872 seconds (process running for 6.342)
