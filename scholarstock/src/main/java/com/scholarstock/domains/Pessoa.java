@@ -63,7 +63,7 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         addTipoPessoa(TipoPessoa.SERVIDOR);
-        addSituacao(Situacao.INATIVO);
+        addSituacao(Situacao.ATIVO);
     }
 
     public Long getId() {
