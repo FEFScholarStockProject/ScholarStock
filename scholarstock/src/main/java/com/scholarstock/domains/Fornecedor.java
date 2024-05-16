@@ -50,8 +50,6 @@ public class Fornecedor {
         this.telefone = telefone;
     }
 
-
-
     public Long getId() {
         return id;
     }
@@ -63,11 +61,9 @@ public class Fornecedor {
     }
 
 
-
     public String getCnpj() {
         return cnpj;
     }
-
 
 
     public void setCnpj(String cnpj) {
@@ -75,11 +71,9 @@ public class Fornecedor {
     }
 
 
-
     public String getRazaoSocial() {
         return razaoSocial;
     }
-
 
 
     public void setRazaoSocial(String razaoSocial) {
@@ -87,23 +81,17 @@ public class Fornecedor {
     }
 
 
-
     public String getNomeFantasia() {
         return nomeFantasia;
     }
-
-
 
     public void setNomeFantasia(String nomeFantasia) {
         this.nomeFantasia = nomeFantasia;
     }
 
-
-
     public String getEndereco() {
         return endereco;
     }
-
 
 
     public void setEndereco(String endereco) {
@@ -111,11 +99,9 @@ public class Fornecedor {
     }
 
 
-
     public String getCidade() {
         return cidade;
     }
-
 
 
     public void setCidade(String cidade) {
@@ -123,11 +109,9 @@ public class Fornecedor {
     }
 
 
-
     public String getEstado() {
         return estado;
     }
-
 
 
     public void setEstado(String estado) {
@@ -135,11 +119,9 @@ public class Fornecedor {
     }
 
 
-
     public String getCep() {
         return cep;
     }
-
 
 
     public void setCep(String cep) {
@@ -147,20 +129,15 @@ public class Fornecedor {
     }
 
 
-
     public int getTelefone() {
         return telefone;
     }
-
 
 
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-
-
-    
 
     @Override
     public int hashCode() {
@@ -171,7 +148,6 @@ public class Fornecedor {
         result = prime * result + telefone;
         return result;
     }
-
 
 
     @Override

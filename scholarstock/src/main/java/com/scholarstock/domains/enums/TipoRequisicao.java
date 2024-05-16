@@ -2,7 +2,7 @@ package com.scholarstock.domains.enums;
 
 public enum TipoRequisicao {
 
-    RequisicaoEntrada(0,"RequisicaoEntrada"), RequisicaoSaida(1,"RequisicaoSaida");  
+    RequisicaoEntrada(0,"Entrada"), RequisicaoSaida(1,"Saida");  
 
     private Integer id;
     private String tipoRequisicao;
