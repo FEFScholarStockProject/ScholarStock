@@ -1,11 +1,29 @@
 package com.scholarstock.domains;
 
+import com.scholarstock.domains.enums.Situacao;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.FetchType;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class UnidadeReceptora {
     private Integer idEntidade;
     private String tipoDoacao;
     private String descricao;
     private double quantidadeDoada;
     private String unidadeMedida;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "situacao")
+    private Set<Integer> situacao = new HashSet<>();
+
+    public UnidadeReceptora(){
+        super();
+        addSituacao(Situacao.INATIVO);
+        addSituacao(Situacao.ATIVO);
+    }
     
     public UnidadeReceptora(Integer idEntidade, String tipoDoacao, String descricao, double quantidadeDoada,
             String unidadeMedida) {
@@ -14,6 +32,8 @@ public class UnidadeReceptora {
         this.descricao = descricao;
         this.quantidadeDoada = quantidadeDoada;
         this.unidadeMedida = unidadeMedida;
+        addSituacao(Situacao.INATIVO);
+        addSituacao(Situacao.ATIVO);
     }
 
     public Integer getIdEntidade() {
@@ -55,5 +75,11 @@ public class UnidadeReceptora {
     public void setUnidadeMedida(String unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
     }
+
+    public void addSituacao(Situacao situacao) {
+        this.situacao.add(situacao.getId());
+    }
+
+
 
 }
