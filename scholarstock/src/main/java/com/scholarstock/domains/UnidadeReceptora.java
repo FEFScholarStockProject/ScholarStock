@@ -56,5 +56,4 @@ public class UnidadeReceptora {
         this.unidadeMedida = unidadeMedida;
     }
 
-    
 }
