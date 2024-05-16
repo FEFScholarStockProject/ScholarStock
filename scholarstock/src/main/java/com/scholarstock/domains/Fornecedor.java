@@ -1,6 +1,16 @@
 package com.scholarstock.domains;
 
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import com.scholarstock.domains.enums.Situacao;
+
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -16,26 +26,30 @@ public class Fornecedor {
     private Long id;
 
     @NotNull
+    @Column (unique = true)
     private String cnpj;
 
+    @Column
     private String razaoSocial;
-
     private String nomeFantasia;
-
     private String endereco;
-
     private String cidade;
-
     private String estado;
-
     private String cep;
 
+    @Column(unique = true)
     private int telefone;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "situacao")
+    private Set<Integer> situacao = new HashSet<>();
 
-    public Fornecedor() { }
 
-    
+    public Fornecedor() { 
+        super();
+        addSituacao(Situacao.ATIVO);
+    }
+
 
     public Fornecedor(Long id, @NotNull String cnpj, String razaoSocial, String nomeFantasia, String endereco,
             String cidade, String estado, String cep, int telefone) {
@@ -48,6 +62,7 @@ public class Fornecedor {
         this.estado = estado;
         this.cep = cep;
         this.telefone = telefone;
+        addSituacao(Situacao.ATIVO);
     }
 
     public Long getId() {
@@ -136,6 +151,14 @@ public class Fornecedor {
 
     public void setTelefone(int telefone) {
         this.telefone = telefone;
+    }
+
+    public Set<Situacao> getSituacao() {
+        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    }
+
+    public void addSituacao(Situacao situacao) {
+        this.situacao.add(situacao.getId());
     }
 
 
