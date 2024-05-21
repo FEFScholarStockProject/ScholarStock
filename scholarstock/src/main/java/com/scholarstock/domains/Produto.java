@@ -1,10 +1,31 @@
 package com.scholarstock.domains;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
+import com.scholarstock.domains.enums.Situacao;
+
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produto")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     protected int idProduto;
+
     protected String descricao;
     protected String quantidade;
     protected double valorProduto;
@@ -14,8 +35,17 @@ public class Produto {
     protected String imagemProduto;
     protected String unidadeMedida;
 
-    public Produto(){
+    @ManyToOne
+    @JoinColumn(name = "idGrupo")
+    protected GrupoProduto grupoProduto;
 
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "situacoes")
+    protected Set<Integer> situacao = new HashSet<>();
+
+    public Produto(){
+        super();
+        addSituacao(Situacao.ATIVO);
     }
 
     public Produto(int idProduto, String descricao, String quantidade, double valorProduto, String saldoEstoque,
@@ -29,6 +59,7 @@ public class Produto {
         this.dataFabricacao = dataFabricacao;
         this.imagemProduto = imagemProduto;
         this.unidadeMedida = unidadeMedida;
+        addSituacao(Situacao.ATIVO);
     }
 
     public int getIdProduto() {
@@ -102,6 +133,26 @@ public class Produto {
     public void setUnidadeMedida(String unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
     }
+
+    //Getters e Setters para GrupoProduto e Situacao
+
+    public Set<Situacao> getSituacao() {
+        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    }
+
+    public void addSituacao(Situacao situacao) {
+        this.situacao.add(situacao.getId());
+    }
+
+    public GrupoProduto getGrupoProduto() {
+        return grupoProduto;
+    }
+
+    public void setGrupoProduto(GrupoProduto grupoProduto) {
+        this.grupoProduto = grupoProduto;
+    }
+
+    
 
     @Override
     public int hashCode() {
