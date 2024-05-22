@@ -17,6 +17,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -45,9 +47,9 @@ public class Pessoa {
     @CollectionTable(name = "perfis")
     private Set<Integer> tipoPessoa = new HashSet<>();
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "situacao")
-    private Set<Integer> situacao = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name = "situacao")
+    private Situacao situacao;
 
     public Pessoa() {
         super();
@@ -122,12 +124,12 @@ public class Pessoa {
         this.tipoPessoa.add(tipoPessoa.getId());
     }
 
-    public Set<Situacao> getSituacao() {
-        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    public Situacao getSituacao() {
+        return situacao;
     }
 
     public void addSituacao(Situacao situacao) {
-        this.situacao.add(situacao.getId());
+        this.situacao = situacao;
     }
 
     @Override
