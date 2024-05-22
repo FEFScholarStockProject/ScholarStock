@@ -4,10 +4,11 @@ import com.scholarstock.domains.enums.Situacao;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.GeneratedValue;
@@ -35,7 +36,7 @@ public class Fornecedor {
     @Column(unique = true)
     private int telefone;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 

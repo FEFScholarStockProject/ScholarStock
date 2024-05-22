@@ -5,6 +5,8 @@ import java.util.Date;
 import com.scholarstock.domains.enums.Situacao;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -33,7 +35,7 @@ public class Produto {
     @JoinColumn(name = "idGrupo")
     protected GrupoProduto grupoProduto;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     @JoinColumn(name="situacao")
     protected Situacao situacao;
 

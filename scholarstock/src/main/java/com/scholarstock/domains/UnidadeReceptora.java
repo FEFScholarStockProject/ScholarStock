@@ -1,8 +1,10 @@
 package com.scholarstock.domains;
 
 import com.scholarstock.domains.enums.Situacao;
+
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 public class UnidadeReceptora {
     private Integer idEntidade;
@@ -11,7 +13,7 @@ public class UnidadeReceptora {
     private double quantidadeDoada;
     private String unidadeMedida;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 
