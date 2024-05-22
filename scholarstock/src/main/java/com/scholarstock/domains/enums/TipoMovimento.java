@@ -1,7 +1,7 @@
 package com.scholarstock.domains.enums;
 
 public enum TipoMovimento {
-    COMPRA(0, "COMPRA"), CONSUMO(1, "CONSUMO"), ACERTO_ESTOQUE(2, "ACERTO_ESTOQUE"), EXCLUIR_ITEM(3, "EXCLUIR_ITEM"), DOACAO(4, "DOACAO");
+    COMPRA(0, "COMPRA"), CONSUMO(1, "CONSUMO"), ACERTO_ESTOQUE(2, "ACERTO_ESTOQUE"), DOACAO(3, "DOACAO");
 
     private Integer id;
     private String tipoMovimento;

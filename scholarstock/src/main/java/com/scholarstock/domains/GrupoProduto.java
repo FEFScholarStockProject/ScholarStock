@@ -33,13 +33,9 @@ public class GrupoProduto {
     @CollectionTable(name = "situacoes")
     private Set<Integer> situacao = new HashSet<>();
 
-
-
     public GrupoProduto() { 
         super();
     }
-
-    
 
     public GrupoProduto(int id, String descricao) {
         this.id = id;
@@ -84,8 +80,6 @@ public class GrupoProduto {
             return false;
         return true;
     }
-
-
 
     public Set<Situacao> getSituacao() {
         return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
