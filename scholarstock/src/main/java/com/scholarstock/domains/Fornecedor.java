@@ -1,18 +1,13 @@
 package com.scholarstock.domains;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
-
 import com.scholarstock.domains.enums.Situacao;
 
-import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.GeneratedValue;
@@ -40,16 +35,15 @@ public class Fornecedor {
     @Column(unique = true)
     private int telefone;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "situacao")
-    private Set<Integer> situacao = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name="situacao")
+    private Situacao situacao;
 
 
     public Fornecedor() { 
         super();
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
-
 
     public Fornecedor(Long id, @NotNull String cnpj, String razaoSocial, String nomeFantasia, String endereco,
             String cidade, String estado, String cep, int telefone) {
@@ -62,39 +56,32 @@ public class Fornecedor {
         this.estado = estado;
         this.cep = cep;
         this.telefone = telefone;
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public Long getId() {
         return id;
     }
 
-
-
     public void setId(Long id) {
         this.id = id;
     }
-
 
     public String getCnpj() {
         return cnpj;
     }
 
-
     public void setCnpj(String cnpj) {
         this.cnpj = cnpj;
     }
-
 
     public String getRazaoSocial() {
         return razaoSocial;
     }
 
-
     public void setRazaoSocial(String razaoSocial) {
         this.razaoSocial = razaoSocial;
     }
-
 
     public String getNomeFantasia() {
         return nomeFantasia;
@@ -108,59 +95,49 @@ public class Fornecedor {
         return endereco;
     }
 
-
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
-
 
     public String getCidade() {
         return cidade;
     }
 
-
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-
 
     public String getEstado() {
         return estado;
     }
 
-
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
 
     public String getCep() {
         return cep;
     }
 
-
     public void setCep(String cep) {
         this.cep = cep;
     }
-
 
     public int getTelefone() {
         return telefone;
     }
 
-
     public void setTelefone(int telefone) {
         this.telefone = telefone;
     }
 
-    public Set<Situacao> getSituacao() {
-        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    public Situacao getSituacao() {
+        return situacao;
     }
 
-    public void addSituacao(Situacao situacao) {
-        this.situacao.add(situacao.getId());
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
     }
-
 
     @Override
     public int hashCode() {
@@ -171,7 +148,6 @@ public class Fornecedor {
         result = prime * result + telefone;
         return result;
     }
-
 
     @Override
     public boolean equals(Object obj) {

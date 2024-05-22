@@ -1,16 +1,10 @@
 package com.scholarstock.domains;
 
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 import com.scholarstock.domains.enums.Situacao;
 
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -39,13 +33,13 @@ public class Produto {
     @JoinColumn(name = "idGrupo")
     protected GrupoProduto grupoProduto;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "situacoes")
-    protected Set<Integer> situacao = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name="situacao")
+    protected Situacao situacao;
 
     public Produto(){
         super();
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public Produto(int idProduto, String descricao, String quantidade, double valorProduto, String saldoEstoque,
@@ -59,7 +53,7 @@ public class Produto {
         this.dataFabricacao = dataFabricacao;
         this.imagemProduto = imagemProduto;
         this.unidadeMedida = unidadeMedida;
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public int getIdProduto() {
@@ -136,12 +130,12 @@ public class Produto {
 
     //Getters e Setters para GrupoProduto e Situacao
 
-    public Set<Situacao> getSituacao() {
-        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    public Situacao getSituacao() {
+        return situacao;
     }
 
-    public void addSituacao(Situacao situacao) {
-        this.situacao.add(situacao.getId());
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
     }
 
     public GrupoProduto getGrupoProduto() {
@@ -151,8 +145,6 @@ public class Produto {
     public void setGrupoProduto(GrupoProduto grupoProduto) {
         this.grupoProduto = grupoProduto;
     }
-
-    
 
     @Override
     public int hashCode() {

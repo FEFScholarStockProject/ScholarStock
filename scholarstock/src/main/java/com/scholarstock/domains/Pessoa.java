@@ -54,7 +54,7 @@ public class Pessoa {
     public Pessoa() {
         super();
         addTipoPessoa(TipoPessoa.SERVIDOR);
-        addSituacao(Situacao.INATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public Pessoa(Long id, String nome, String cpf, String rg, LocalDate dataNascimento, String telefone) {
@@ -65,7 +65,7 @@ public class Pessoa {
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
         addTipoPessoa(TipoPessoa.SERVIDOR);
-        addSituacao(Situacao.INATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public Long getId() {
@@ -128,7 +128,7 @@ public class Pessoa {
         return situacao;
     }
 
-    public void addSituacao(Situacao situacao) {
+    public void setSituacao(Situacao situacao) {
         this.situacao = situacao;
     }
 

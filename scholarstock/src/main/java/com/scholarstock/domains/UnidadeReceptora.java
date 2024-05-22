@@ -1,12 +1,8 @@
 package com.scholarstock.domains;
 
 import com.scholarstock.domains.enums.Situacao;
-import jakarta.persistence.CollectionTable;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.FetchType;
-
-import java.util.HashSet;
-import java.util.Set;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 public class UnidadeReceptora {
     private Integer idEntidade;
@@ -15,14 +11,13 @@ public class UnidadeReceptora {
     private double quantidadeDoada;
     private String unidadeMedida;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "situacao")
-    private Set<Integer> situacao = new HashSet<>();
+    @ManyToOne
+    @JoinColumn(name="situacao")
+    private Situacao situacao;
 
     public UnidadeReceptora(){
         super();
-        addSituacao(Situacao.INATIVO);
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
     
     public UnidadeReceptora(Integer idEntidade, String tipoDoacao, String descricao, double quantidadeDoada,
@@ -32,8 +27,7 @@ public class UnidadeReceptora {
         this.descricao = descricao;
         this.quantidadeDoada = quantidadeDoada;
         this.unidadeMedida = unidadeMedida;
-        addSituacao(Situacao.INATIVO);
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
     public Integer getIdEntidade() {
@@ -76,10 +70,12 @@ public class UnidadeReceptora {
         this.unidadeMedida = unidadeMedida;
     }
 
-    public void addSituacao(Situacao situacao) {
-        this.situacao.add(situacao.getId());
+    public Situacao geSituacao(){
+        return situacao;
     }
 
-
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
 
 }
