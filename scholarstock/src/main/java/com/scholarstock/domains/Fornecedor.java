@@ -35,8 +35,8 @@ public class Fornecedor {
     private String cidade;
     private String estado;
     private String cep;
-    private int telefone;
-    private int email;
+    private String telefone;
+    private String email;
 
     @Enumerated(EnumType.STRING)
     @JoinColumn(name="situacao")
@@ -50,8 +50,8 @@ public class Fornecedor {
 
 
     public Fornecedor(Long id, @NotNull String cpfCnpj, String razaoSocial, String nomeFantasia, String rua,
-            String numero, String bairro, String complemento, String cidade, String estado, String cep, int telefone,
-            int email, Situacao situacao) {
+            String numero, String bairro, String complemento, String cidade, String estado, String cep, String telefone,
+            String email) {
         this.id = id;
         this.cpfCnpj = cpfCnpj;
         this.razaoSocial = razaoSocial;
@@ -65,7 +65,7 @@ public class Fornecedor {
         this.cep = cep;
         this.telefone = telefone;
         this.email = email;
-        this.situacao = situacao;
+        setSituacao(Situacao.ATIVO);
     }
 
 
@@ -179,22 +179,22 @@ public class Fornecedor {
     }
 
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 
 
-    public void setEmail(int email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -240,6 +240,9 @@ public class Fornecedor {
             return false;
         return true;
     }
+
+
+   
 
 
     
