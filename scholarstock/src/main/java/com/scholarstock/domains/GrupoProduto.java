@@ -27,7 +27,7 @@ public class GrupoProduto {
     @Size(min=5, max=50)
     private String descricao;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 

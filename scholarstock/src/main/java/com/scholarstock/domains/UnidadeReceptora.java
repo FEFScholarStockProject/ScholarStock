@@ -26,6 +26,7 @@ public class UnidadeReceptora {
     @Column (unique = true)
     private String cpfCnpj;
     
+    @NotNull
     private String razaoSocial;
     private String nomeFantasia;
     private String rua;
@@ -38,7 +39,7 @@ public class UnidadeReceptora {
     private String telefone;
     private String email;     
     
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 
@@ -47,7 +48,7 @@ public class UnidadeReceptora {
         setSituacao(Situacao.ATIVO);
     }
 
-    public UnidadeReceptora(Long id, @NotNull String cpfCnpj, String razaoSocial, String nomeFantasia, String rua,
+    public UnidadeReceptora(Long id, @NotNull String cpfCnpj,  @NotNull String razaoSocial, String nomeFantasia, String rua,
             String numero, String bairro, String complemento, String cidade, String estado, String cep, String telefone,
             String email) {
         this.id = id;

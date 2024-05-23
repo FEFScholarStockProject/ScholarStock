@@ -35,7 +35,7 @@ public class Produto {
     @JoinColumn(name = "idGrupo")
     protected GrupoProduto grupoProduto;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name="situacao")
     protected Situacao situacao;
 

@@ -25,7 +25,7 @@ public class Fornecedor {
     @Column (unique = true)
     private String cpfCnpj;
 
-    @Column
+    @NotNull
     private String razaoSocial;
     private String nomeFantasia;
     private String rua;
@@ -38,7 +38,7 @@ public class Fornecedor {
     private String telefone;
     private String email;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 
@@ -49,7 +49,7 @@ public class Fornecedor {
     }
 
 
-    public Fornecedor(Long id, @NotNull String cpfCnpj, String razaoSocial, String nomeFantasia, String rua,
+    public Fornecedor(Long id, @NotNull String cpfCnpj,  @NotNull String razaoSocial, String nomeFantasia, String rua,
             String numero, String bairro, String complemento, String cidade, String estado, String cep, String telefone,
             String email) {
         this.id = id;

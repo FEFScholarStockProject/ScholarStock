@@ -51,7 +51,7 @@ public class Pessoa {
     @CollectionTable(name = "perfis")
     private Set<Integer> tipoPessoa = new HashSet<>();
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.ORDINAL)
     @JoinColumn(name="situacao")
     private Situacao situacao;
 
