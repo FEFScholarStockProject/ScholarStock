@@ -96,10 +96,6 @@ public class Pessoa {
         return tipoPessoa.stream().map(x -> TipoPessoa.toEnum(x)).collect(Collectors.toSet());
     }
 
-    public void addTipoPessoa(TipoPessoa tipoPessoa) {
-        this.tipoPessoa.add(tipoPessoa.getId());
-    }
-
     public Long getId() {
         return id;
     }
