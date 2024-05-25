@@ -1,8 +1,15 @@
 package com.scholarstock.domains;
 
+
+import com.scholarstock.domains.enums.Situacao;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -15,16 +22,24 @@ public class GrupoProduto {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
-
+    
     @NotNull
     @Size(min=5, max=50)
     private String descricao;
 
-    public GrupoProduto() { }
+    @Enumerated(EnumType.ORDINAL)
+    @JoinColumn(name="situacao")
+    private Situacao situacao;
+
+    public GrupoProduto() { 
+        super();
+        setSituacao(Situacao.ATIVO);
+    }
 
     public GrupoProduto(int id, String descricao) {
         this.id = id;
         this.descricao = descricao;
+        setSituacao(Situacao.ATIVO);
     }
 
     public int getId() {
@@ -63,6 +78,14 @@ public class GrupoProduto {
         if (id != other.id)
             return false;
         return true;
+    }
+
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
     }
 
 }

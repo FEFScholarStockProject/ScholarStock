@@ -2,9 +2,26 @@ package com.scholarstock.domains;
 
 import java.util.Date;
 
+import com.scholarstock.domains.enums.Situacao;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "produto")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     protected int idProduto;
+
     protected String descricao;
     protected String quantidade;
     protected double valorProduto;
@@ -14,8 +31,17 @@ public class Produto {
     protected String imagemProduto;
     protected String unidadeMedida;
 
-    public Produto(){
+    @ManyToOne
+    @JoinColumn(name = "idGrupo")
+    protected GrupoProduto grupoProduto;
 
+    @Enumerated(EnumType.ORDINAL)
+    @JoinColumn(name="situacao")
+    protected Situacao situacao;
+
+    public Produto(){
+        super();
+        setSituacao(Situacao.ATIVO);
     }
 
     public Produto(int idProduto, String descricao, String quantidade, double valorProduto, String saldoEstoque,
@@ -29,6 +55,7 @@ public class Produto {
         this.dataFabricacao = dataFabricacao;
         this.imagemProduto = imagemProduto;
         this.unidadeMedida = unidadeMedida;
+        setSituacao(Situacao.ATIVO);
     }
 
     public int getIdProduto() {
@@ -101,6 +128,24 @@ public class Produto {
 
     public void setUnidadeMedida(String unidadeMedida) {
         this.unidadeMedida = unidadeMedida;
+    }
+
+    //Getters e Setters para GrupoProduto e Situacao
+
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
+
+    public GrupoProduto getGrupoProduto() {
+        return grupoProduto;
+    }
+
+    public void setGrupoProduto(GrupoProduto grupoProduto) {
+        this.grupoProduto = grupoProduto;
     }
 
     @Override

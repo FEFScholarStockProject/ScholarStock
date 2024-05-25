@@ -1,5 +1,6 @@
 # ScholarStock
 
-## Projeto de Extensão para escola estadual EELAS
+Projeto de extensão a comunidade do curso de Bacharelado de Sistemas de Informação em atendimento as necessidades de gestão dos processos de estoque pública estadual Libero de Almeida Silvares.
 
-## Controle de Estoque Acadêmico.
+## Digrama de Classes
+![Diagrama de Classes](classdiagram.png)

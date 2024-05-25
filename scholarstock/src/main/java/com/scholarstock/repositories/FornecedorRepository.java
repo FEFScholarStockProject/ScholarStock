@@ -11,5 +11,5 @@ import com.scholarstock.domains.Fornecedor;
 @Repository
 public interface FornecedorRepository extends JpaRepository<Fornecedor, Long>{
     
-    List<Fornecedor> findByCnpj(String cnpj);
+    List<Fornecedor> findByCpfCnpj(String cpfCnpj);
 }

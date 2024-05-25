@@ -13,11 +13,15 @@ import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "pessoa")
@@ -27,43 +31,69 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    @NotNull
     private String nome;
 
+    @NotNull
     @Column(unique = true)
-    private String cpf;
+    private String cpfCnpj;
 
+    @NotNull
     @Column(unique = true)
-    private String rg;
+    private String email;
 
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataNascimento;
 
-    @Column(unique = true)
     private String telefone;
 
     @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "perfis")
     private Set<Integer> tipoPessoa = new HashSet<>();
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "situacao")
-    private Set<Integer> situacao = new HashSet<>();
+    @Enumerated(EnumType.ORDINAL)
+    @JoinColumn(name="situacao")
+    private Situacao situacao;
+
+    private String rgIE;
+    private String rua;
+    private String numero;
+    private String bairro;
+    private String complemento;
+    private String cidade;
+    private String estado;
+    private String cep;
+    
 
     public Pessoa() {
         super();
         addTipoPessoa(TipoPessoa.SERVIDOR);
-        addSituacao(Situacao.INATIVO);
+        setSituacao(Situacao.ATIVO);
     }
 
-    public Pessoa(Long id, String nome, String cpf, String rg, LocalDate dataNascimento, String telefone) {
+    public Pessoa(Long id, @NotNull String nome, @NotNull String cpfCnpj, @NotNull String email, LocalDate dataNascimento,
+            String telefone, String rgIE, String rua, String numero, String bairro, String complemento, String cidade,
+            String estado, String cep) {
         this.id = id;
         this.nome = nome;
-        this.cpf = cpf;
-        this.rg = rg;
+        this.cpfCnpj = cpfCnpj;
+        this.email = email;
         this.dataNascimento = dataNascimento;
         this.telefone = telefone;
+        this.rgIE = rgIE;
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.complemento = complemento;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.cep = cep;
         addTipoPessoa(TipoPessoa.SERVIDOR);
-        addSituacao(Situacao.ATIVO);
+        setSituacao(Situacao.ATIVO);
+    }
+
+    public Set<TipoPessoa> getTipoPessoa() {
+        return tipoPessoa.stream().map(x -> TipoPessoa.toEnum(x)).collect(Collectors.toSet());
     }
 
     public Long getId() {
@@ -82,20 +112,20 @@ public class Pessoa {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfCnpj() {
+        return cpfCnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
     }
 
-    public String getRg() {
-        return rg;
+    public String getEmail() {
+        return email;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public LocalDate getDataNascimento() {
@@ -114,20 +144,80 @@ public class Pessoa {
         this.telefone = telefone;
     }
 
-    public Set<TipoPessoa> getTipoPessoa() {
-        return tipoPessoa.stream().map(x -> TipoPessoa.toEnum(x)).collect(Collectors.toSet());
+    public void setTipoPessoa(Set<Integer> tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
     }
 
-    public void addTipoPessoa(TipoPessoa tipoPessoa) {
-        this.tipoPessoa.add(tipoPessoa.getId());
+    public Situacao getSituacao() {
+        return situacao;
     }
 
-    public Set<Situacao> getSituacao() {
-        return situacao.stream().map(x -> Situacao.toEnum(x)).collect(Collectors.toSet());
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
     }
 
-    public void addSituacao(Situacao situacao) {
-        this.situacao.add(situacao.getId());
+    public String getRgIE() {
+        return rgIE;
+    }
+
+    public void setRgIE(String rgIE) {
+        this.rgIE = rgIE;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public String getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getCep() {
+        return cep;
+    }
+
+    public void setCep(String cep) {
+        this.cep = cep;
     }
 
     @Override
@@ -135,9 +225,8 @@ public class Pessoa {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
-        result = prime * result + ((rg == null) ? 0 : rg.hashCode());
-        result = prime * result + ((telefone == null) ? 0 : telefone.hashCode());
+        result = prime * result + ((cpfCnpj == null) ? 0 : cpfCnpj.hashCode());
+        result = prime * result + ((email == null) ? 0 : email.hashCode());
         return result;
     }
 
@@ -155,22 +244,17 @@ public class Pessoa {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (cpf == null) {
-            if (other.cpf != null)
+        if (cpfCnpj == null) {
+            if (other.cpfCnpj != null)
                 return false;
-        } else if (!cpf.equals(other.cpf))
+        } else if (!cpfCnpj.equals(other.cpfCnpj))
             return false;
-        if (rg == null) {
-            if (other.rg != null)
+        if (email == null) {
+            if (other.email != null)
                 return false;
-        } else if (!rg.equals(other.rg))
-            return false;
-        if (telefone == null) {
-            if (other.telefone != null)
-                return false;
-        } else if (!telefone.equals(other.telefone))
+        } else if (!email.equals(other.email))
             return false;
         return true;
     }
-    
+   
 }

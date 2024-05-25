@@ -1,8 +1,14 @@
 package com.scholarstock.domains;
 
+import com.scholarstock.domains.enums.Situacao;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.persistence.GeneratedValue;
@@ -16,44 +22,56 @@ public class Fornecedor {
     private Long id;
 
     @NotNull
-    private String cnpj;
+    @Column (unique = true)
+    private String cpfCnpj;
 
+    @NotNull
     private String razaoSocial;
-
     private String nomeFantasia;
-
-    private String endereco;
-
+    private String rua;
+    private String numero;
+    private String bairro;
+    private String complemento;
     private String cidade;
-
     private String estado;
-
     private String cep;
+    private String telefone;
+    private String email;
 
-    private int telefone;
+    @Enumerated(EnumType.ORDINAL)
+    @JoinColumn(name="situacao")
+    private Situacao situacao;
 
 
-    public Fornecedor() { }
+    public Fornecedor() { 
+        super();
+        setSituacao(Situacao.ATIVO);
+    }
 
-    
 
-    public Fornecedor(Long id, @NotNull String cnpj, String razaoSocial, String nomeFantasia, String endereco,
-            String cidade, String estado, String cep, int telefone) {
+    public Fornecedor(Long id, @NotNull String cpfCnpj,  @NotNull String razaoSocial, String nomeFantasia, String rua,
+            String numero, String bairro, String complemento, String cidade, String estado, String cep, String telefone,
+            String email) {
         this.id = id;
-        this.cnpj = cnpj;
+        this.cpfCnpj = cpfCnpj;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
-        this.endereco = endereco;
+        this.rua = rua;
+        this.numero = numero;
+        this.bairro = bairro;
+        this.complemento = complemento;
         this.cidade = cidade;
         this.estado = estado;
         this.cep = cep;
         this.telefone = telefone;
+        this.email = email;
+        setSituacao(Situacao.ATIVO);
     }
+
 
     public Long getId() {
         return id;
     }
-
 
 
     public void setId(Long id) {
@@ -61,13 +79,13 @@ public class Fornecedor {
     }
 
 
-    public String getCnpj() {
-        return cnpj;
+    public String getCpfCnpj() {
+        return cpfCnpj;
     }
 
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCpfCnpj(String cpfCnpj) {
+        this.cpfCnpj = cpfCnpj;
     }
 
 
@@ -85,17 +103,49 @@ public class Fornecedor {
         return nomeFantasia;
     }
 
+
     public void setNomeFantasia(String nomeFantasia) {
         this.nomeFantasia = nomeFantasia;
     }
 
-    public String getEndereco() {
-        return endereco;
+
+    public String getRua() {
+        return rua;
     }
 
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+
+
+    public String getNumero() {
+        return numero;
+    }
+
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+
+    public String getBairro() {
+        return bairro;
+    }
+
+
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
+    }
+
+
+    public String getComplemento() {
+        return complemento;
+    }
+
+
+    public void setComplemento(String complemento) {
+        this.complemento = complemento;
     }
 
 
@@ -129,13 +179,33 @@ public class Fornecedor {
     }
 
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
     }
 
 
@@ -144,8 +214,7 @@ public class Fornecedor {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((cnpj == null) ? 0 : cnpj.hashCode());
-        result = prime * result + telefone;
+        result = prime * result + ((cpfCnpj == null) ? 0 : cpfCnpj.hashCode());
         return result;
     }
 
@@ -164,14 +233,18 @@ public class Fornecedor {
                 return false;
         } else if (!id.equals(other.id))
             return false;
-        if (cnpj == null) {
-            if (other.cnpj != null)
+        if (cpfCnpj == null) {
+            if (other.cpfCnpj != null)
                 return false;
-        } else if (!cnpj.equals(other.cnpj))
-            return false;
-        if (telefone != other.telefone)
+        } else if (!cpfCnpj.equals(other.cpfCnpj))
             return false;
         return true;
     }
 
+
+   
+
+
+    
+    
 }
