@@ -1,5 +1,6 @@
-#ScholarStock
+# ScholarStock
 
-Projeto de extensão a comunidade do curso de Bacharelado de Sistemas de Informação em atendimento as necessidades de gestão dos processos de estoque pública estadual Libero de Almeida Silvares.
+Projeto de extensão à comunidade do curso de Bacharelado de Sistemas de Informação em atendimento às necessidades de gestão dos processos de estoque público estadual Libero de Almeida Silvares.
 
-##Digrama de Classes
+## Diagrama de Classes
+![Diagrama de Classe](classdiagram.png)
