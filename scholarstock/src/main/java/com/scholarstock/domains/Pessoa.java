@@ -92,6 +92,10 @@ public class Pessoa {
         setSituacao(Situacao.ATIVO);
     }
 
+    public void addTipoPessoa(TipoPessoa tipoPessoa){
+        this.tipoPessoa.add(tipoPessoa.getId());
+    }
+
     public Set<TipoPessoa> getTipoPessoa() {
         return tipoPessoa.stream().map(x -> TipoPessoa.toEnum(x)).collect(Collectors.toSet());
     }
