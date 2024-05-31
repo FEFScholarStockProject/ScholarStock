@@ -1,10 +1,15 @@
 package com.scholarstock.domains.dtos;
 
 import com.scholarstock.domains.GrupoProduto;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public class GrupoProdutoDTO {
 
-    private int id;
+    private Integer id;
+
+    @NotNull(message = "O campo nome não pode ser nulo")
+    @NotBlank(message = "O campo nome não pode ser vazio")
     private String descricao;
 
     public GrupoProdutoDTO(){}
@@ -18,7 +23,7 @@ public class GrupoProdutoDTO {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

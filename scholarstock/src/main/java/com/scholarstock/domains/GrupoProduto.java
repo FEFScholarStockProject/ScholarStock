@@ -1,19 +1,17 @@
 package com.scholarstock.domains;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.scholarstock.domains.dtos.GrupoProdutoDTO;
 import com.scholarstock.domains.enums.Situacao;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.*;
 
-import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
-import jakarta.persistence.GeneratedValue;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "grupoproduto")
@@ -31,7 +29,11 @@ public class GrupoProduto {
     @JoinColumn(name="situacao")
     private Situacao situacao;
 
-    public GrupoProduto() { 
+    @JsonIgnore
+    @OneToMany
+    private List<Produto> produtos = new ArrayList<>();
+
+    public GrupoProduto() {
         super();
         setSituacao(Situacao.ATIVO);
     }
@@ -39,6 +41,12 @@ public class GrupoProduto {
     public GrupoProduto(int id, String descricao) {
         this.id = id;
         this.descricao = descricao;
+        setSituacao(Situacao.ATIVO);
+    }
+
+    public GrupoProduto(GrupoProdutoDTO objDto) {
+        this.id = objDto.getId();
+        this.descricao = objDto.getDescricao();
         setSituacao(Situacao.ATIVO);
     }
 
@@ -88,4 +96,11 @@ public class GrupoProduto {
         this.situacao = situacao;
     }
 
+    public List<Produto> getProdutos() {
+        return produtos;
+    }
+
+    public void setProdutos(List<Produto> produtos) {
+        this.produtos = produtos;
+    }
 }
